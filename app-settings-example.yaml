@@ -1,0 +1,24 @@
+# Open weather "OneCall" method
+api-url: http://api.openweathermap.org/data/2.5/onecall
+
+# App key
+app-id: <your app key here>
+
+# Latitude
+lat: 44.588897
+
+# Longitude
+lon: 33.523756
+
+exclude: current,minutely,hourly,alerts
+
+# Present values in metric system
+units: metric
+
+# Language of result
+lang: ru
+
+# logger configuration
+logger:
+  # Minimum level of displayed messages
+  log-level: Info
