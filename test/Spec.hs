@@ -18,7 +18,7 @@ main = hspec $ do
       logger <- ConsoleLogger.new Logger.Debug
       weather <- OpenWeather.new config logger
       let request = Weather.requestFrom config
-      response <- Weather.forecast5Days weather request
-      Logger.logInfo logger $ responseBody response
+      response <- Weather.oneCall weather request
+      Logger.logInfo logger $ show $ responseBody response
       responseStatus response `shouldBe` ok200
 

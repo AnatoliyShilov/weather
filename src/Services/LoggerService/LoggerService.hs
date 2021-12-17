@@ -46,7 +46,7 @@ class (Show a) => WriteToLog a where
 
 instance {-# OVERLAPPABLE #-} (Show a) => WriteToLog [a]
 
-instance {-# OVERLAPING #-} WriteToLog String where
+instance {-# OVERLAPPING #-} WriteToLog String where
   writeToLog handle priority message = writeToLog handle priority (T.pack message)
 
 instance WriteToLog T.Text where
